@@ -4,10 +4,15 @@
     %title= title
     %link{ :rel => "stylesheet", :href => "/css/grid.css" }
   %body
-    %ul
-      %li
-        %a{ :href => "/#{GitWiki.homepage}" } Home
-      %li
-        %a{ :href => "/pages" } All pages
-    #content= yield
+    .container_9
+      %div{:class => "grid_5 prefix_2 suffix_2"}
+        %div{:class => "grid_1 alpha"}
+          %a{ :href => "/#{GitWiki.homepage}" } Home
+        .grid_1
+          %a{ :href => "/pages" } All pages
+        .grid_1
+        .clear
+        %br
+
+        #content= yield
 

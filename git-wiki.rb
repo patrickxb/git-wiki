@@ -33,6 +33,7 @@ module GitWiki
     def self.find(name)
       page_blob = find_blob(name)
       raise PageNotFound.new(name) unless page_blob
+      p page_blob
       new(page_blob)
     end
 
